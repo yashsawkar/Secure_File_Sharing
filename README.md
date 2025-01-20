@@ -106,7 +106,7 @@ services:
 
 Deploy using:
 
-docker-compose up -d
+`docker-compose up -d`
 
 
 2.	Deploy to a Cloud Provider:
