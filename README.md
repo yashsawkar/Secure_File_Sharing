@@ -1,5 +1,3 @@
-Here’s how you can address the two points for your project:
-
 1. Test Cases for the Project
 
 Testing is critical to ensure the functionality and security of the application. Below are the key test cases categorized by feature:
@@ -73,18 +71,16 @@ Step 1: Prepare the Application
 	•	Email service configuration for email verification (e.g., SendGrid, AWS SES).
 
 Step 2: Containerize the Application
-	1.	Create a Dockerfile for the application:
+1.	Create a Dockerfile for the application:
 
 FROM python:3.9-slim
 WORKDIR /app
 COPY . .
 RUN pip install -r requirements.txt
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+2.	Build and tag the Docker image:
 
-
-	2.	Build and tag the Docker image:
-
-docker build -t secure-file-sharing .
+`docker build -t secure-file-sharing` 
 
 
 
@@ -113,23 +109,20 @@ Deploy using:
 docker-compose up -d
 
 
-	2.	Deploy to a Cloud Provider:
+2.	Deploy to a Cloud Provider:
 	•	Use AWS Elastic Beanstalk, Google Cloud Run, or Azure App Services for deploying the containerized application.
 	•	Configure autoscaling, logging, and monitoring.
-	3.	Set Up a Reverse Proxy:
+3.	Set Up a Reverse Proxy:
 	•	Use NGINX or Apache to manage SSL termination and serve static files.
 	•	Ensure HTTPS is enforced using a certificate from Let’s Encrypt or similar providers.
-	4.	Database Setup:
+4.	Database Setup:
 	•	Use a managed database service (e.g., AWS RDS or MongoDB Atlas) for scalability.
-	•	Run migrations on the production database using Alembic:
+	•	Run migrations on the production database using Alembic: `alembic upgrade head`
 
-alembic upgrade head
-
-
-	5.	Monitoring and Logging:
+5.	Monitoring and Logging:
 	•	Integrate tools like Prometheus, Grafana, or Datadog for monitoring.
 	•	Use centralized logging tools like ELK Stack or AWS CloudWatch.
-	6.	CI/CD Pipeline:
+6.	CI/CD Pipeline:
 	•	Automate builds and deployments using GitHub Actions, Jenkins, or GitLab CI/CD.
 	•	Ensure tests are run automatically before deployment.
 
