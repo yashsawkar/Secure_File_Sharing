@@ -1,3 +1,15 @@
+
+ASSIGNMENT DESCRIPTION
+
+This is a secure file-sharing system project designed to help communicate with file sharing between Ops Users and Client users. 
+It ensures secure
+1. Uploading files
+2. Access files
+3. Sharing files
+with role-based permissions
+backend developed with FastAPI ensuring high performance and security
+
+
 1. Test Cases for the Project
 
 Testing is critical to ensure the functionality and security of the application. Below are the key test cases categorized by feature:
