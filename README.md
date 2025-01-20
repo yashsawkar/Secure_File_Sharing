@@ -1,3 +1,5 @@
+Here’s how you can address the two points for your project:
+
 1. Test Cases for the Project
 
 Testing is critical to ensure the functionality and security of the application. Below are the key test cases categorized by feature:
